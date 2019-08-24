@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_menu"
+    tools:context=".ui.score.ScoreActivity">
+
+    <Button
+        android:id="@+id/btGoalHome"
+        style="@style/custom_button"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="42dp"
+        android:text="Gol"
+        app:layout_constraintEnd_toStartOf="@+id/btGoalAway"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHomeGoal" />
+
+    <Button
+        android:id="@+id/btGoalAway"
+        style="@style/custom_button"
+        android:layout_marginEnd="42dp"
+        android:text="Gol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btGoalHome"
+        app:layout_constraintTop_toTopOf="@+id/btGoalHome" />
+
+    <Button
+        android:id="@+id/btRestart"
+        style="@style/custom_button"
+        android:layout_marginTop="48dp"
+        android:text="Reiniciar partida"
+        app:layout_constraintEnd_toEndOf="@+id/btGoalAway"
+        app:layout_constraintStart_toStartOf="@+id/btGoalHome"
+        app:layout_constraintTop_toBottomOf="@+id/btGoalHome" />
+
+    <Button
+        android:id="@+id/btFinishGame"
+        style="@style/custom_button"
+        android:layout_marginTop="32dp"
+        android:text="Finalizar partida"
+        app:layout_constraintEnd_toEndOf="@+id/btRestart"
+        app:layout_constraintStart_toStartOf="@+id/btRestart"
+        app:layout_constraintTop_toBottomOf="@+id/btRestart" />
+
+    <TextView
+        android:id="@+id/tvAwayGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="0"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="@+id/btGoalAway"
+        app:layout_constraintStart_toStartOf="@+id/btGoalAway"
+        app:layout_constraintTop_toTopOf="@+id/tvHomeGoal" />
+
+    <TextView
+        android:id="@+id/tvEventName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="42dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        tools:text="Nome do evento"
+        android:textAllCaps="true"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHomeTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/white"
+        android:text="Home"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/btGoalHome"
+        app:layout_constraintStart_toStartOf="@+id/btGoalHome"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventName" />
+
+    <TextView
+        android:id="@+id/tvAwayTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Away"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/btGoalAway"
+        app:layout_constraintStart_toStartOf="@+id/btGoalAway"
+        app:layout_constraintTop_toTopOf="@+id/tvHomeTeamName" />
+
+    <TextView
+        android:id="@+id/tvHomeGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:text="0"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="@+id/btGoalHome"
+        app:layout_constraintStart_toStartOf="@+id/btGoalHome"
+        app:layout_constraintTop_toBottomOf="@+id/tvHomeTeamName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/title_game_wizard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/background_menu"
+    tools:context=".ui.game.event.EventFragment">
+
+    <Button
+        android:id="@+id/btNextStep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="PRÓXIMO"
+        app:layout_constraintEnd_toEndOf="@+id/tvAwayTeamTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvAwayTeamTitle"
+        app:layout_constraintTop_toBottomOf="@+id/inputAwayTeam" />
+
+    <EditText
+        android:id="@+id/inputAwayTeam"
+        style="@style/input_wizard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Ex:. Final do Mundial de Clubes 2019"
+        app:layout_constraintEnd_toEndOf="@+id/tvAwayTeamTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvAwayTeamTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvAwayTeamSubtitle" />
+
+    <TextView
+        android:id="@+id/tvAwayTeamTitle"
+        style="@style/title_game_wizard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Vamos Começar!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAwayTeamSubtitle"
+        style="@style/subtitle_game_wizard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Qual o nome do evento?"
+        app:layout_constraintEnd_toEndOf="@+id/tvAwayTeamTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvAwayTeamTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvAwayTeamTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
